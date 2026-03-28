@@ -33,7 +33,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Upload ${{ matrix.type }} package to the latest release
-        uses: svenstaro/upload-release-action@2
+        uses: svenstaro/upload-release-action@v2
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           file: ${{ steps.CreateIEModPackage.outputs.PackageBaseName }}.${{ matrix.type }}
